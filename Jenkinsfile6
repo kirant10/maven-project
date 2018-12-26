@@ -33,7 +33,7 @@ stages{
 
                 stage ("Deploy to Production"){
                     steps {
-                        sh "scp -p W31c0m3! **/target/*.war root@${params.tomcat_prod}:/usr/local/apache-tomcat-9.0.12/webapps"
+                        sh "scp -i /home/jenkins/id_rsa.pub **/target/*.war root@${params.tomcat_prod}:/usr/local/apache-tomcat-9.0.12/webapps"
                     }
                 }
             }
