@@ -33,7 +33,7 @@ stages{
 
                 stage ("Deploy to Production"){
                     steps {
-                        sh "scp -i /root/.ssh/id_rsa **/target/*.war root@${params.tomcat_prod}:/usr/local/apache-tomcat-9.0.12/webapps"
+                        sh "scp **/target/*.war root@${params.tomcat_prod}:/usr/local/apache-tomcat-9.0.12/webapps"
                     }
                 }
             }
