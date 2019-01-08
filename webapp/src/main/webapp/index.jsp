@@ -1,1 +1,1 @@
-Hello, World! version updated for automation
+Hello, World! This is fully automated jenkins pipeline
