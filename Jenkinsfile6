@@ -27,7 +27,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "cp **/target/*.war /usr/local/apache-tomcat-9.0.12/webapps"
+                        sh "scp **/target/*.war root@{params.tomcat_dev}:/usr/local/apache-tomcat-9.0.12/webapps"
                     }
                 }
 
